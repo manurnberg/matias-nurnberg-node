@@ -1,11 +1,11 @@
 { 
     "development": {
-      "username": "test",
-      "password": "Secret123!",
+      "username": "root",
+      "password": "Secret3!",
       "database": "test_db",
       "host": "localhost",
       "dialect": "mysql",
-      "operatorsAliases": 0, 
+      "operatorsAliases": 0,
       "pool":{
         "max":5,
         "min":0,
