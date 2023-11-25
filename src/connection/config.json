@@ -1,11 +1,25 @@
-{ 
+{
     "development": {
       "username": "root",
-      "password": "Secret3!",
+      "password": "secret",
+      "database": "test-db",
+      "host": "127.0.0.1",
+      "port": 33061,
+      "dialect": "mysql",
+      "pool":{
+        "max":5,
+        "min":0,
+        "acquire":30000, 
+        "idle":10000
+      }
+    },
+    "production": {
+      "username": "root",
+      "password": "Secret!",
       "database": "test_db",
       "host": "localhost",
       "dialect": "mysql",
-      "operatorsAliases": 0,
+      "operatorsAliases": 0, 
       "pool":{
         "max":5,
         "min":0,
