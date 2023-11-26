@@ -1,4 +1,4 @@
-# CHALLENGE MATIAS NÜRNBERG (w)
+# CHALLENGE MATIAS NÜRNBERG 
 ## EJECUTAR APP EN AMBIENTE DE PRODUCCION Y LOCAL
 ### AMBIENTE LOCAL / DESARROLLO
 - RUN BACKEND SERVER port 3001 (sin nodemon): `node server/app.js`
@@ -67,7 +67,7 @@
 
 1. prueba endpoint /mutation. (Resultado tiene mutation status code 200)
 
-curl --location --request POST 'http://localhost:3001/mutation' \
+`curl --location --request POST 'http://localhost:3001/mutation' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "dna": [
@@ -79,10 +79,11 @@ curl --location --request POST 'http://localhost:3001/mutation' \
         "TCACTG"
         ]
 }'
+`
 
 2. prueba endpoint /mutation. (Resultado no tiene mutation status code 403)
 
-curl --location --request POST 'http://localhost:3001/mutation' \
+`curl --location --request POST 'http://localhost:3001/mutation' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "dna": [
@@ -93,16 +94,17 @@ curl --location --request POST 'http://localhost:3001/mutation' \
         "CCCTTA",
         "TCACTG"]
 }'
+`
 
 3. prueba endpoint /stats. (resultado json {"count_mutations": ,"count_no_mutations": ,"ratio": ""})
 
-curl --location --request GET 'http://localhost:3001/stats'
+`curl --location --request GET 'http://localhost:3001/stats'`
 
 ### PRUEBA EN SERVIDOR AWS
 
 1. prueba endpoint /mutation. (Resultado tiene mutation status code 200)
 
-curl --location --request POST 'http://18.118.7.44:3001/mutation' \
+`curl --location --request POST 'http://18.118.7.44:3001/mutation' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "dna": [
@@ -114,10 +116,11 @@ curl --location --request POST 'http://18.118.7.44:3001/mutation' \
         "TCACTG"
         ]
 }'
+`
 
 2. prueba endpoint /mutation. (Resultado no tiene mutation status code 403)
 
-curl --location --request POST 'http://18.118.7.44:3001/mutation' \
+`curl --location --request POST 'http://18.118.7.44:3001/mutation' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "dna": [
@@ -127,7 +130,7 @@ curl --location --request POST 'http://18.118.7.44:3001/mutation' \
         "AGAACG",
         "CCCTTA",
         "TCACTG"]
-}'
+}'`
 
 3. prueba endpoint /stats. (resultado json {"count_mutations": ,"count_no_mutations": ,"ratio": ""})
 
