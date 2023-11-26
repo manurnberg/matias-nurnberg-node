@@ -29,6 +29,21 @@ Content-Type: application/json
     ]
 }
 
+### invalid data
+
+POST http://localhost:{{service-port}}/mutation
+Content-Type: application/json
+{
+    "dna": [
+        "ATGCGA",
+        "CAGTGC",
+        "TTATGT",
+        "AGAAGG",
+        "CCCCTA",
+        "TCXCTG"
+    ]
+}
+
 ### get stats
 
 GET http://localhost:{{service-port}}/stats

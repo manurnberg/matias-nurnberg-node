@@ -1,13 +1,16 @@
 const checkDna = (dna) => {
     const n = dna.length;
-  
+    let result = {};
+    
     if (!dna.every((row) => row.length === n)) {
-      throw new Error("La matriz de ADN no es cuadrada");
+      result = {error:"Matrix isn't wright"};
+      return result;
     }
   
     const validLetters = new Set(["A", "T", "C", "G"]);
     if (!dna.every((row) => row.split("").every(letter => validLetters.has(letter)))) {
-      throw new Error("Letra inválida en la matriz de ADN");
+      result = {error : "Invalid character on Matrix"}
+      return result;
     }
   
     function isValidPosition(i, j) {
@@ -48,6 +51,25 @@ const checkDna = (dna) => {
     }
   
     return false;
+  }
+
+  validateDnaMatrix = (dna) => {
+    let result;
+  
+    const n = dna.length;
+  
+    if (!dna.every((row) => row.length === n)) {
+      result = { error: "Matrix isn't right" };
+      return result;
+    }
+  
+    const validLetters = new Set(["A", "T", "C", "G"]);
+    if (!dna.every((row) => row.split("").every((letter) => validLetters.has(letter)))) {
+      result = { error: "Invalid character on Matrix" };
+      return result;
+    }
+  
+    return result;
   }
 
   module.exports = checkDna;

@@ -22,6 +22,9 @@ mutationController.checkMutation = async (req, res, next) => {
     const dna = req.body['dna'];
 
     const result = checkDna(dna)
+    if (result.error) {
+        return res.status(400).json({ error: result.error });
+      }
 
     try {
         const newData = await save({
