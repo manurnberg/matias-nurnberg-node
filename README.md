@@ -1,4 +1,31 @@
 # CHALLENGE MATIAS NÜRNBERG 
+Requerimos que desarrolles un proyecto (en node) que detecte si una persona tiene diferencias genéticas basándose en su secuencia de ADN. Para eso es necesario crear un servicio con un método o función con la siguiente firma (En JavaScript/Node JS):
+ 
+Debe recibir como parámetro un array de Strings que representan cada fila de una tabla
+de (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las
+cuales representa cada base nitrogenada del ADN. Debes validar que sólo puedas recibir bases nitrogenadas válidas.
+ 
+Sin mutación:
+ 
+A T G C G A
+C A G T G C
+T T A T T T
+A G A C G G
+G C G T C A
+T C A C T G
+ 
+Con mutación:
+ 
+A T G C G A
+C A G T G C
+T T A T G T
+A G A A G G
+C C C C T A
+T C A C T G
+ 
+Sabrás si existe una mutación si se encuentra más de una secuencia de cuatro letras
+iguales, de forma oblicua (diagonal), horizontal o vertical.
+
 ## EJECUTAR APP EN AMBIENTE DE PRODUCCION Y LOCAL
 ### AMBIENTE LOCAL / DESARROLLO
 - RUN BACKEND SERVER port 3001 (sin nodemon): `node server/app.js`
