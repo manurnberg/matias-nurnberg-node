@@ -134,5 +134,5 @@
 
 3. prueba endpoint /stats. (resultado json {"count_mutations": ,"count_no_mutations": ,"ratio": ""})
 
-curl --location --request GET 'http://18.118.7.44:3001/stats'
+`curl --location --request GET 'http://18.118.7.44:3001/stats'`
 
