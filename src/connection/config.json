@@ -1,11 +1,11 @@
 {
     "development": {
       "username": "root",
-      "password": "Secret3!",
-      "database": "test_db",
+      "password": "secret",
+      "database": "test-db",
       "host": "localhost",
       "dialect": "mysql",
-      "operatorsAliases": 0, 
+      "port": 33061,
       "pool":{
         "max":5,
         "min":0,
