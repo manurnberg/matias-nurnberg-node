@@ -1,8 +1,8 @@
 {
     "development": {
       "username": "root",
-      "password": "secret",
-      "database": "test-db",
+      "password": "Secret3!",
+      "database": "test_db",
       "host": "127.0.0.1",
       "port": 33061,
       "dialect": "mysql",
@@ -15,7 +15,7 @@
     },
     "production": {
       "username": "root",
-      "password": "Secret!",
+      "password": "Secret3!",
       "database": "test_db",
       "host": "localhost",
       "dialect": "mysql",
