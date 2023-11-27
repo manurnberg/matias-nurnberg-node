@@ -60,4 +60,4 @@ function checkSequence(direction, dna, n) {
   return false;
 }
 
-  module.exports = checkDna;
+  module.exports = hasMutation;
