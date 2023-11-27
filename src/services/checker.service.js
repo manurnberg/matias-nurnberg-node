@@ -7,7 +7,6 @@ const DIRECTIONS = [
 
 const hasMutation = (dna) => {
     const n = dna.length;
-    let result = {};
     
      if (!validateMatrixDimensions(dna, n)) {
       return { error: "Matrix isn't right" };
