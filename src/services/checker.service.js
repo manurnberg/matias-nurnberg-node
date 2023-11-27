@@ -5,7 +5,7 @@ const DIRECTIONS = [
   [-1, 1] 
 ];
 
-const checkDna = (dna) => {
+const hasMutation = (dna) => {
     const n = dna.length;
     let result = {};
     

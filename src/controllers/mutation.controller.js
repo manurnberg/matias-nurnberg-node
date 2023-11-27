@@ -1,5 +1,5 @@
 const Mutation = require('../model/mutation.model');
-const checkDna = require('../services/checker.service');
+const hasMutation = require('../services/checker.service');
 const { save, getStats } = require('../repository/mutation.repository');
 
 
@@ -20,7 +20,7 @@ mutationController.checkMutation = async (req, res, next) => {
     const dna = req.body['dna'];
 
     console.info('Checking mutation for DNA sequence...');
-    const result = checkDna(dna);
+    const result = hasMutation(dna);
 
     if (result.error) {
         console.error('Invalid DNA sequence:', result.error);
